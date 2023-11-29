@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         ivLogin = findViewById(R.id.ivLogin);
         ivFavorites = findViewById(R.id.ivFavorites);
+        this.ivLogin.setOnClickListener(this::login);
+        this.ivFavorites.setOnClickListener(this::favorites);
 
         ivEstrella1 = findViewById(R.id.ivEstrella1);
         ivEstrella2 = findViewById(R.id.ivEstrella2);
@@ -33,22 +35,16 @@ public class MainActivity extends AppCompatActivity {
         configureEstrellaClickListener(ivEstrella2, 2, "Camisa 2", "$75.000");
         configureEstrellaClickListener(ivEstrella3, 3, "Camisa 3", "$80.000");
         configureEstrellaClickListener(ivEstrella4, 4, "Camisa 4", "$40.000");
+    }
 
+    private void favorites(View view) {
+        Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+        startActivity(intent);
+    }
 
-        ivLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-        ivFavorites.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
-                startActivity(intent);
-            }
-        });
+    private void login(View view) {
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void configureEstrellaClickListener(final ImageView estrellaImageView, final int productoId, final String productoNombre, final String productoPrecio) {
