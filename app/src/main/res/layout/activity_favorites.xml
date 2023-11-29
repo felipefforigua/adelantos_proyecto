@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Barra visual -->
+    <LinearLayout
+        android:id="@+id/barraVisual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="255dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="50dp"
+            android:text="Favoritos" />
+
+    </LinearLayout>
+
+    <!-- Contenedor de productos favoritos -->
+    <GridLayout
+        android:id="@+id/ContenedorFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barraVisual"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <!-- Aquí se agregarán dinámicamente los productos favoritos -->
+
+    </GridLayout>
+
+    <!-- Barra de manejo -->
+    <LinearLayout
+        android:id="@+id/barraManejoFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cafe_claro"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/estrella_icono"
+            android:contentDescription="Favoritos"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/tendencias_icono"
+            android:contentDescription="Tendencias"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/carrodecompras_icono"
+            android:contentDescription="Carro de compras"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

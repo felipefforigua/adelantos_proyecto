@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SICOSIS</string>
+    <string name="button_login">Iniciar sesión</string>
+    <string name="tvTitle">SICOSIS</string>
+    <string name="info_camisa1">Esta camiseta es de diseñador, hecha en ceda de oveja virgen
+        para la comodidad de las personas que les gusta lucir un buen estilo y sentirse comodo
+        al mismo tiempo
+    </string>
+
+</resources>
