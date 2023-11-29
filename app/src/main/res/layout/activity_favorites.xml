@@ -6,6 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Barra visual -->
+
+    <!-- Contenedor de productos favoritos -->
     <LinearLayout
         android:id="@+id/barraVisual"
         android:layout_width="match_parent"
@@ -18,22 +20,68 @@
             android:layout_width="255dp"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:textStyle="bold"
+            android:text="Favoritos"
             android:textColor="@color/red"
             android:textSize="50dp"
-            android:text="Favoritos" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <!-- Contenedor de productos favoritos -->
     <GridLayout
         android:id="@+id/ContenedorFavoritos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="568dp"
+        android:layout_above="@+id/barraManejoFavoritos"
         android:layout_below="@+id/barraVisual"
+        android:layout_marginBottom="2dp"
+        android:background="@color/grey"
         android:columnCount="2"
         android:orientation="horizontal"
         android:padding="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivCamisa1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camisa1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPrecio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Precio: $50.000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvInfoCamisa1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/info_camisa1"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <!-- Aquí se agregarán dinámicamente los productos favoritos -->
 
