@@ -4,10 +4,14 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,11 +19,17 @@ public class MainActivity extends AppCompatActivity {
     private ImageView ivFavorites;
     private ImageView ivEstrella1, ivEstrella2, ivEstrella3, ivEstrella4;
 
+    private Retrofit retrofit;
+    private EditText user;
+    private EditText pass;
+    private Button logear;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        linkInit();
 
         ivLogin = findViewById(R.id.ivLogin);
         ivFavorites = findViewById(R.id.ivFavorites);
@@ -96,5 +106,9 @@ public class MainActivity extends AppCompatActivity {
         estrellaImageView.setTag(isAmarilla ? "amarilla" : null);
     }
 
+    private void linkInit(){
+        this.user = findViewById(R.id.etCorreo);
+        this.pass = findViewById(R.id.etContrasena);
+    }
 
 }
