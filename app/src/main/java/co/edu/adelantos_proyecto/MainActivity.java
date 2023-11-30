@@ -3,23 +3,11 @@ package co.edu.adelantos_proyecto;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Collection;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
