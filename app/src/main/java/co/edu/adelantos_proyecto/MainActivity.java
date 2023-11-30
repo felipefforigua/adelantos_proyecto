@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView ivLogin;
     private ImageView ivFavorites;
+    private ImageView ivcamiseta;
     private ImageView ivEstrella1, ivEstrella2, ivEstrella3, ivEstrella4;
 
     @SuppressLint("MissingInflatedId")
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         ivLogin = findViewById(R.id.ivLogin);
         ivFavorites = findViewById(R.id.ivFavorites);
+        ivcamiseta = findViewById(R.id.camiseta_blanca);
         this.ivLogin.setOnClickListener(this::login);
         this.ivFavorites.setOnClickListener(this::favorites);
+        this.ivcamiseta.setOnClickListener(this::camsietas);
 
         ivEstrella1 = findViewById(R.id.ivEstrella1);
         ivEstrella2 = findViewById(R.id.ivEstrella2);
@@ -35,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         configureEstrellaClickListener(ivEstrella2, 2, "Camisa 2", "$75.000");
         configureEstrellaClickListener(ivEstrella3, 3, "Camisa 3", "$80.000");
         configureEstrellaClickListener(ivEstrella4, 4, "Camisa 4", "$40.000");
+    }
+
+    private void camsietas(View view) {
+        Intent intent = new Intent(MainActivity.this, productos.class);
+        startActivity(intent);
     }
 
     private void favorites(View view) {

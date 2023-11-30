@@ -7,4 +7,18 @@
         al mismo tiempo
     </string>
 
+<!---VISTA PRODUCTOS-->
+    <string name="imagenProducto"></string>
+    <string name="tituloProducto">Camiseta DIM 110 Años</string>
+    <string name="descripcionProducto">299.960,00</string>
+    <string name="descripciontipoProducto">Hombre Performance</string>
+    <string name="tallaProducto">Talla</string>
+    <string name="tallaProductoXS">XS</string>
+    <string name="tallaProductoS">S</string>
+    <string name="tallaProductoM">M</string>
+    <string name="tallaProductoL">L</string>
+    <string name="tallaProductoXL">XL</string>
+    <string name="agregarCarrito">AGREGAR AL CARRITO</string>
+
+
 </resources>
