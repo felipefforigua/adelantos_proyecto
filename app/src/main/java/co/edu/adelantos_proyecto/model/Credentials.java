@@ -1,24 +1,27 @@
 package co.edu.adelantos_proyecto.model;
 
 public class Credentials {
-    private String use_mail;
-    private String use_password;
+
+    private String us_identifier;
+
+    private String us_key;
+
     private String use_id;
 
-    public String getUse_mail() {
-        return use_mail;
+    public String getUs_identifier() {
+        return us_identifier;
     }
 
-    public void setUse_mail(String use_mail) {
-        this.use_mail = use_mail;
+    public void setUs_identifier(String us_identifier) {
+        this.us_identifier = us_identifier;
     }
 
-    public String getUse_password() {
-        return use_password;
+    public String getUs_key() {
+        return us_key;
     }
 
-    public void setUse_password(String use_password) {
-        this.use_password = use_password;
+    public void setUs_key(String us_key) {
+        this.us_key = us_key;
     }
 
     public String getUse_id() {
@@ -29,3 +32,4 @@ public class Credentials {
         this.use_id = use_id;
     }
 }
+

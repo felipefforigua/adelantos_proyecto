@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">SICOSIS</string>
-    <string name="button_login">Iniciar sesión</string>
     <string name="tvTitle">SICOSIS</string>
     <string name="info_camisa1">Esta camiseta es de diseñador, hecha en ceda de oveja virgen
         para la comodidad de las personas que les gusta lucir un buen estilo y sentirse comodo
         al mismo tiempo
     </string>
+<!--LOGIN-->
+    <string name="tvUser">Usuario</string>
+    <string name="tvPass">Contraseña</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="etCorreo">Ingrese su correo electrónico</string>
+    <string name="etContrasena">Ingrese su contraseña</string>
+    <string name="btnLogin">Iniciar sesión</string>
 
 <!---VISTA PRODUCTOS-->
     <string name="imagenProducto"></string>
@@ -19,15 +25,4 @@
     <string name="tallaProductoL">L</string>
     <string name="tallaProductoXL">XL</string>
     <string name="agregarCarrito">AGREGAR AL CARRITO</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-
-
 </resources>

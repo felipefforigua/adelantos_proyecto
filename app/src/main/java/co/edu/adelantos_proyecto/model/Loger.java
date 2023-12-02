@@ -1,15 +1,15 @@
 package co.edu.adelantos_proyecto.model;
 
 public class Loger {
-    private String use_password;
+    private String use_pss;
     private String use_mail;
 
-    public String getUse_password() {
-        return use_password;
+    public String getUse_pss() {
+        return use_pss;
     }
 
-    public void setUse_password(String use_password) {
-        this.use_password = use_password;
+    public void setUse_pss(String use_pss) {
+        this.use_pss = use_pss;
     }
 
     public String getUse_mail() {
