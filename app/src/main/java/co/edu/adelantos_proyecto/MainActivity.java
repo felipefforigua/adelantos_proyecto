@@ -103,5 +103,4 @@ public class MainActivity extends AppCompatActivity {
     private void setEstrellaAmarilla(ImageView estrellaImageView, boolean isAmarilla) {
         estrellaImageView.setTag(isAmarilla ? "amarilla" : null);
     }
-
 }
