@@ -80,8 +80,8 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.commit();
                                 goTo();
                             }
-                        }else {q
-                            alertView("Usuario o contraseña inválida");
+                        }else {
+                            alertView("Usuario o contraseña invalida");
                         }
                     }else {
                         alertView("Usuario no existe! \n intente nuevamente");

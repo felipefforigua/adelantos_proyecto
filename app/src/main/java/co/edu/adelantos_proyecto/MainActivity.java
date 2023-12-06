@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView ivLogin;
-    private ImageView ivFavorites;
+    private ImageView ivFavorites, ivCarrito;
     private ImageView ivcamiseta;
     private ImageView ivEstrella1, ivEstrella2, ivEstrella3, ivEstrella4;
 
@@ -24,9 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         ivLogin = findViewById(R.id.ivLogin);
         ivFavorites = findViewById(R.id.ivFavorites);
+        ivCarrito = findViewById(R.id.ivCarrito);
         ivcamiseta = findViewById(R.id.camiseta_blanca);
         this.ivLogin.setOnClickListener(this::login);
         this.ivFavorites.setOnClickListener(this::favorites);
+        this.ivCarrito.setOnClickListener(this::carrito);
         this.ivcamiseta.setOnClickListener(this::camsietas);
 
         ivEstrella1 = findViewById(R.id.ivEstrella1);
@@ -47,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void favorites(View view) {
         Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+        startActivity(intent);
+    }
+
+    private void carrito(View view) {
+        Intent intent = new Intent(MainActivity.this, CarritoActivity.class);
         startActivity(intent);
     }
 

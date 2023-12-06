@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Barra visual -->
+
+    <!-- Contenedor de productos favoritos -->
+    <LinearLayout
+        android:id="@+id/barraVisual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="255dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="Carrito"
+            android:textColor="@color/red"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/ContenedorFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="568dp"
+        android:layout_above="@+id/barraManejoFavoritos"
+        android:layout_below="@+id/barraVisual"
+        android:layout_marginBottom="2dp"
+        android:background="@color/grey"
+        android:columnCount="2"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+
+
+            <ImageView
+                android:id="@+id/ivCamisaBlanca"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camiseta_blanca" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPrecio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Precio: $50.000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvInfoCamisa1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/info_camisa1"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/botonesCompras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:background="@color/grey"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/btnEliminarProducto"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:backgroundTint="@color/red"
+                android:padding="8dp"
+                android:text="Eliminar producto"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnComprar"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:padding="8dp"
+                android:text="Comprar"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- Aquí se agregarán dinámicamente los productos favoritos -->
+
+    </GridLayout>
+
+
+    <LinearLayout
+        android:id="@+id/barraManejoFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cafe_claro"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/estrella_icono"
+            android:contentDescription="Favoritos"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/tendencias_icono"
+            android:contentDescription="Tendencias"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/carrodecompras_icono"
+            android:contentDescription="Carro de compras"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

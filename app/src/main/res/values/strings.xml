@@ -5,7 +5,7 @@
         para la comodidad de las personas que les gusta lucir un buen estilo y sentirse comodo
         al mismo tiempo
     </string>
-<!--LOGIN-->
+    <!--LOGIN-->
     <string name="tvUser">Usuario</string>
     <string name="tvPass">Contraseña</string>
     <string name="btnIngresar">Ingresar</string>
@@ -13,7 +13,7 @@
     <string name="etContrasena">Ingrese su contraseña</string>
     <string name="btnLogin">Iniciar sesión</string>
 
-<!---VISTA PRODUCTOS-->
+    <!---VISTA PRODUCTOS-->
     <string name="imagenProducto"></string>
     <string name="tituloProducto">Camiseta DIM 110 Años</string>
     <string name="descripcionProducto">299.960,00</string>
@@ -25,4 +25,8 @@
     <string name="tallaProductoL">L</string>
     <string name="tallaProductoXL">XL</string>
     <string name="agregarCarrito">AGREGAR AL CARRITO</string>
+
+    <string name="eliminar_del_carrito">Eliminar del carrito</string>
+    <string name="realizar_compra">Realizar compra</string>
+
 </resources>

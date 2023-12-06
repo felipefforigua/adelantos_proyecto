@@ -269,11 +269,12 @@
             android:layout_gravity="center"/>
 
         <ImageView
+            android:id="@+id/ivCarrito"
             android:layout_width="5dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/carrodecompras_icono"
-            android:contentDescription="Favoritos"
+            android:contentDescription="Carrito"
             android:padding="8dp"
             android:adjustViewBounds="true"
             android:layout_gravity="center"/>
