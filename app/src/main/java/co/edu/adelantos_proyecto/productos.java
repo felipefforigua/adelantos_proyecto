@@ -24,13 +24,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class productos extends AppCompatActivity {
 
     private ImageView icvolver;
-<<<<<<< HEAD
     private Button agregarCarrito;
 
-
-=======
     private List<Product> productList = new ArrayList<>();
->>>>>>> 64982d91e2b281dfd123a0e41861d0550d81573b
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

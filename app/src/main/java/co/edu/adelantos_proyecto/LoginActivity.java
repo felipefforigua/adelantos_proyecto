@@ -81,11 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                                 goTo();
                             }
                         }else {
-<<<<<<< HEAD
                             alertView("Usuario o contraseña invalida");
-=======
-                            alertView("Usuario o contraseña inválida");
->>>>>>> 64982d91e2b281dfd123a0e41861d0550d81573b
                         }
                     }else {
                         alertView("Usuario no existe! \n intente nuevamente");
