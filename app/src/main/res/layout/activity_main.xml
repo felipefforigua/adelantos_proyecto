@@ -29,6 +29,7 @@
             android:layout_height="80dp"
             android:padding="8dp"
             android:src="@drawable/login_imagen" />
+
     </LinearLayout>
 
     <GridLayout

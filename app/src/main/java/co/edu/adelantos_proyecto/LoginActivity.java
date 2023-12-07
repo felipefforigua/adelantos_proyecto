@@ -204,4 +204,5 @@ public class LoginActivity extends AppCompatActivity {
         this.btnLogin = findViewById(R.id.btnLogin);
 
     }
+
 }

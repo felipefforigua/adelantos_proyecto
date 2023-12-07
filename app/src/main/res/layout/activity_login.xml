@@ -83,6 +83,19 @@
             android:textSize="25dp"
             tools:text="@string/btnLogin" />
 
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/cbCondiciones"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:text="@string/btnRegistro"
+            android:textSize="25dp"
+            tools:text="@string/btnRegistro" />
+
     </LinearLayout>
 
 </RelativeLayout>
