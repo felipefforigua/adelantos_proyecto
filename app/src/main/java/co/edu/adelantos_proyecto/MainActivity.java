@@ -12,6 +12,8 @@ package co.edu.adelantos_proyecto;
         import retrofit2.Call;
         import retrofit2.Callback;
         import retrofit2.Response;
+
+        import android.widget.ImageButton;
         import android.widget.ImageView;
         import android.widget.Toast;
         import androidx.appcompat.app.AppCompatActivity;
@@ -25,15 +27,29 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MovieAdapter movieAdapter;
 
+    private ImageView ivlogin;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        begin();
+        showMovies();
+        ivlogin.setOnClickListener(this::irlogin);
         recyclerView=findViewById(R.id.rv_movies);
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
-        showMovies();
+    }
+
+    private void irlogin(View view) {
+        Intent irlogin = new Intent(this,LoginActivity.class);
+        startActivity(irlogin);
+        finish();
+    }
+
+    private void begin() {
+        this.ivlogin = findViewById(R.id.ivLogin);
     }
 
     public void showMovies(){
