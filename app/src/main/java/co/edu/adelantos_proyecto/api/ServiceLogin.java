@@ -14,7 +14,3 @@ public interface ServiceLogin {
     public Call<ResponseCredentials> accesslogin(@Body Loger login);
 }
 
-public interface ProductService {
-    @GET("products")
-    Call<List<Product>> getProducts();
-}

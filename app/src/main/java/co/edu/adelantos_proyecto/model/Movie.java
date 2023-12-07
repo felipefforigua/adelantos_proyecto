@@ -1,29 +1,30 @@
 package co.edu.adelantos_proyecto.model;
 
-public class Product {
+import org.w3c.dom.Text;
 
-    private String products_id;
-    private String products_usuario_id ;
+public class Movie {
+
+    private Integer products_id;
+    private Integer products_usuario;
     private String products_ruta_imagen;
     private String products_descripcion;
     private String products_tallas_disponibles;
     private String products_precio;
 
-
-    public String getProducts_id() {
+    public Integer getProducts_id() {
         return products_id;
     }
 
-    public void setProducts_id(String products_id) {
+    public void setProducts_id(Integer products_id) {
         this.products_id = products_id;
     }
 
-    public String getProducts_usuario_id() {
-        return products_usuario_id;
+    public Integer getProducts_usuario() {
+        return products_usuario;
     }
 
-    public void setProducts_usuario_id(String products_usuario_id) {
-        this.products_usuario_id = products_usuario_id;
+    public void setProducts_usuario(Integer products_usuario) {
+        this.products_usuario = products_usuario;
     }
 
     public String getProducts_ruta_imagen() {
