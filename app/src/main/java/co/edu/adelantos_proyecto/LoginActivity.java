@@ -1,11 +1,16 @@
 package co.edu.adelantos_proyecto;
 
+<<<<<<< Updated upstream
 import static co.edu.adelantos_proyecto.api.ValuesApi.BASE_URL;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+=======
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+>>>>>>> Stashed changes
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,6 +29,7 @@ import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+<<<<<<< Updated upstream
 import co.edu.adelantos_proyecto.api.ServiceLogin;
 import co.edu.adelantos_proyecto.model.Credentials;
 import co.edu.adelantos_proyecto.model.Loger;
@@ -33,6 +39,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+=======
+import java.util.regex.Pattern;
+>>>>>>> Stashed changes
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -47,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         linkInit();
 
+<<<<<<< Updated upstream
         btnLogin.setOnClickListener(this::processLogin);
     }
 
@@ -204,4 +214,73 @@ public class LoginActivity extends AppCompatActivity {
         this.btnLogin = findViewById(R.id.btnLogin);
 
     }
+
 }
+=======
+        etNombre = findViewById(R.id.etNombre);
+        etApellido = findViewById(R.id.etApellido);
+        etCorreo = findViewById(R.id.etCorreo);
+        etContrasena = findViewById(R.id.etContrasena);
+        etConfirmarContrasena = findViewById(R.id.etConfimarContrasena);
+        btnLogin = findViewById(R.id.btnLogin);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = etNombre.getText().toString().trim();
+                String lastName = etApellido.getText().toString().trim();
+                String email = etCorreo.getText().toString().trim();
+                String password = etContrasena.getText().toString().trim();
+                String verifyPassword = etConfirmarContrasena.getText().toString().trim();
+
+                // Validación de nombre y apellido
+                if (!Pattern.matches("[a-zA-Z]+", name)) {
+                    showAlert("Por favor, ingresa un nombre válido");
+                    return;
+                }
+
+                if (!Pattern.matches("[a-zA-Z]+", lastName)) {
+                    showAlert("Por favor, ingresa un apellido válido");
+                    return;
+                }
+
+                // Validación de correo electrónico
+                if (!Pattern.matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+", email)) {
+                    showAlert("Por favor, ingresa un correo electrónico válido");
+                    return;
+                }
+
+                if (!password.equals(verifyPassword)) {
+                    showAlert("Las contraseñas no coinciden");
+                    return;
+                }
+
+                // Validación de contraseña
+                if (!Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$", password)) {
+                    showAlert("La contraseña debe tener al menos 8 caracteres y contener al menos una letra minúscula, una letra mayúscula, un número y un carácter especial");
+                    return;
+                }
+
+                // Verificación de contraseña
+
+
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void showAlert(String message) {
+        new AlertDialog.Builder(LoginActivity.this)
+                .setTitle("Error")
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
+}
+>>>>>>> Stashed changes

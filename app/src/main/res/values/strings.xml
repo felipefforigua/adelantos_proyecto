@@ -12,6 +12,7 @@
     <string name="etCorreo">Ingrese su correo electrónico</string>
     <string name="etContrasena">Ingrese su contraseña</string>
     <string name="btnLogin">Iniciar sesión</string>
+    <string name="btnRegistro">Registro</string>
 
     <!---VISTA PRODUCTOS-->
     <string name="imagenProducto"></string>
