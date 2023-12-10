@@ -50,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.rv_movies);
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
 
+        ivFavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void irlogin(View view) {
@@ -90,5 +98,43 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void configureEstrellaClickListener(final ImageView estrellaImageView, final int productoId, final String productoNombre, final String productoPrecio) {
+        estrellaImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleEstrellaColor(estrellaImageView);
+                if (isEstrellaAmarilla(estrellaImageView)) {
+                    // Si la estrella está amarilla, agrega el producto a la lista de favoritos
+                    addToFavorites(productoId, productoNombre, productoPrecio);
+                } else {
+                    // Si la estrella no está amarilla, elimina el producto de la lista de favoritos
+                    removeFromFavorites(productoId);
+                }
+            }
+        });
+    }
+    // ...
+    private void addToFavorites(int productoId, String productoNombre, String productoPrecio) {
+               Toast.makeText(MainActivity.this, "Agregado a favoritos: " + productoNombre, Toast.LENGTH_SHORT).show();
+    }
+    private void removeFromFavorites(int productoId) {
+        Toast.makeText(MainActivity.this, "Eliminado de favoritos", Toast.LENGTH_SHORT).show();
+    }
+    private void toggleEstrellaColor(ImageView estrellaImageView) {
+        boolean isAmarilla = isEstrellaAmarilla(estrellaImageView);
+        if (isAmarilla) {
+            estrellaImageView.setImageResource(R.drawable.icono_estrella);
+        } else {
+            estrellaImageView.setImageResource(R.drawable.icono_estrella_amarillo);
+        }
+        setEstrellaAmarilla(estrellaImageView, !isAmarilla);
+    }
+    private boolean isEstrellaAmarilla(ImageView estrellaImageView) {
+        return estrellaImageView.getTag() != null && estrellaImageView.getTag().equals("amarilla");
+    }
+    private void setEstrellaAmarilla(ImageView estrellaImageView, boolean isAmarilla) {
+        estrellaImageView.setTag(isAmarilla ? "amarilla" : null);
     }
 }
