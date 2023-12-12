@@ -18,6 +18,7 @@
 
             <ImageView
                 android:id="@+id/imagenProducto"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:src="@drawable/camiseta_blanca" />
@@ -218,7 +219,9 @@
                     android:backgroundTint="@color/black"
                     android:text="@string/agregarCarrito"
                     android:textAlignment="viewStart"
-                    tools:text="@string/agregarCarrito" />
+                    tools:text="@string/agregarCarrito"
+                    android:onClick="agregarAlCarrito" />
+
 
                 <ImageView
                     android:layout_width="90dp"

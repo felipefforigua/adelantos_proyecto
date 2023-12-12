@@ -31,13 +31,14 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FavoritesActivity" />
-<<<<<<< HEAD
-        <activity android:name=".productos" />
-
-=======
-        <activity android:name=".productos">
-        </activity>
->>>>>>> 64982d91e2b281dfd123a0e41861d0550d81573b
+        <activity
+            android:name=".productos"
+            android:exported="false"
+            />
+        <activity
+            android:name=".item_movie"
+            android:exported="false"
+            />
     </application>
 
 </manifest>

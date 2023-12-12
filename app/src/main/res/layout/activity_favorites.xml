@@ -132,41 +132,43 @@
 
     <!-- Barra de manejo -->
     <LinearLayout
-        android:id="@+id/barraManejoFavoritos"
+        android:id="@+id/barraManejo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/cafe_claro"
-        android:padding="8dp">
+        android:background="@color/red"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivFavorites"
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="Favoritos"
+            android:padding="8dp"
+            android:src="@drawable/estrella" />
 
         <ImageView
             android:layout_width="5dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:src="@drawable/estrella_icono"
+            android:src="@drawable/tendencia"
             android:contentDescription="Favoritos"
             android:padding="8dp"
             android:adjustViewBounds="true"
             android:layout_gravity="center"/>
 
         <ImageView
+            android:id="@+id/ivCarrito"
             android:layout_width="5dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:src="@drawable/tendencias_icono"
-            android:contentDescription="Tendencias"
-            android:padding="8dp"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:layout_width="5dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:src="@drawable/carrodecompras_icono"
-            android:contentDescription="Carro de compras"
-            android:padding="8dp"
+            android:src="@drawable/carrito_de_compras"
+            android:contentDescription="Carrito"
+            android:padding="5dp"
             android:adjustViewBounds="true"
             android:layout_gravity="center"/>
     </LinearLayout>
