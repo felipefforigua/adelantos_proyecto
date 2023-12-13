@@ -29,7 +29,6 @@
             android:layout_height="70dp"
             android:padding="10dp"
             android:src="@drawable/login_imagen" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -71,8 +70,8 @@
             android:layout_width="5dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:src="@drawable/tendencia"
-            android:contentDescription="Favoritos"
+            android:src="@drawable/casa"
+            android:contentDescription="Inicio"
             android:padding="8dp"
             android:adjustViewBounds="true"
             android:layout_gravity="center"/>

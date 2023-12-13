@@ -18,12 +18,21 @@
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="255dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="Carrito"
+            android:text="CARRITO"
             android:textColor="@color/red"
-            android:textSize="50dp"
+            android:textSize="45dp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ic_volver"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:backgroundTint="#BC0B0B"
+            android:contentDescription="Talla"
+            android:padding="5dp"
+            android:src="@drawable/ic_volver" />
 
     </LinearLayout>
 
@@ -31,7 +40,7 @@
         android:id="@+id/ContenedorFavoritos"
         android:layout_width="match_parent"
         android:layout_height="568dp"
-        android:layout_above="@+id/barraManejoFavoritos"
+        android:layout_above="@+id/barraManejo"
         android:layout_below="@+id/barraVisual"
         android:layout_marginBottom="2dp"
         android:background="@color/grey"
@@ -144,11 +153,12 @@
             android:src="@drawable/estrella" />
 
         <ImageView
+            android:id="@+id/casa"
             android:layout_width="5dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:src="@drawable/tendencia"
-            android:contentDescription="Favoritos"
+            android:src="@drawable/casa"
+            android:contentDescription="Inicio"
             android:padding="8dp"
             android:adjustViewBounds="true"
             android:layout_gravity="center"/>

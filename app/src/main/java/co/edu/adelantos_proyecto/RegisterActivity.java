@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,12 +20,16 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etNombre, etApellido, etCorreo, etContrasena, etConfirmarContrasena;
     private CheckBox cbCondiciones;
     private Button btnLogin;
+    private ImageView ic_volver;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        Intent intent = getIntent();ic_volver = findViewById(R.id.ivVolver);
+        this.ic_volver.setOnClickListener(this::main);
 
         etNombre = findViewById(R.id.etNombre);
         etApellido = findViewById(R.id.etApellido);
@@ -134,5 +139,9 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+    }
+    private void main(View view) {
+        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

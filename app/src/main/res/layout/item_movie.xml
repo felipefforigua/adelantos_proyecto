@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/productos_main"
-    android:layout_marginStart="0dp"
+    android:layout_marginStart="16dp"
     android:layout_marginTop="16dp"
-    android:layout_marginEnd="0dp"
+    android:layout_marginEnd="16dp"
     android:layout_marginBottom="16dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp"
@@ -23,35 +21,35 @@
         <ImageView
             android:id="@+id/iv_portada"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="156dp"
             android:background="@color/white"
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/icono_estrella"
-            android:layout_width="32dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/icono_estrella"
-            app:layout_constraintBottom_toBottomOf="@id/iv_portada"
-            app:layout_constraintEnd_toEndOf="@id/iv_portada" />
-
-        <TextView
-            android:id="@+id/tv_titulo"
+        <LinearLayout
+            android:id="@+id/layout_info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TITULO"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/iv_portada"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_titulo"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="TITULO"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_talla"
@@ -59,7 +57,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+            app:layout_constraintTop_toBottomOf="@id/layout_info"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"/>
@@ -71,7 +69,7 @@
             android:text="XL"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+            app:layout_constraintTop_toBottomOf="@id/layout_info"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"/>

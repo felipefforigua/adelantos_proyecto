@@ -1,9 +1,11 @@
 package co.edu.adelantos_proyecto;
+
 import static co.edu.adelantos_proyecto.api.ValuesApi.BASE_URL;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,6 +15,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.security.MessageDigest;
@@ -21,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import co.edu.adelantos_proyecto.api.ServiceLogin;
 import co.edu.adelantos_proyecto.model.Credentials;
 import co.edu.adelantos_proyecto.model.Loger;
@@ -30,13 +34,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import java.util.regex.Pattern;
-
 
 public class LoginActivity extends AppCompatActivity {
 
     private Retrofit retrofit;
-
+    private ImageView ic_volver;
     private EditText etCorreo, etContrasena;
     private Button btnLogin;
 
@@ -45,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         linkInit();
+        Intent intent = getIntent();ic_volver = findViewById(R.id.ivVolver);
+        this.ic_volver.setOnClickListener(this::main);
 
         btnLogin.setOnClickListener(this::processLogin);
     }
@@ -205,4 +209,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    private void main(View view) {
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
