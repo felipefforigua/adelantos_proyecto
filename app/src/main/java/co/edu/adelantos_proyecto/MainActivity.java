@@ -21,6 +21,9 @@ package co.edu.adelantos_proyecto;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private ImageView ivLogin;
+
     private ImageView ivFavorites, ivCarrito;
     private ImageView ivEstrella1, ivEstrella2, ivEstrella3, ivEstrella4;
     private List<Movie> movies;
@@ -28,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     private MovieAdapter movieAdapter;
 
     private ImageView ivlogin;
-
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         ivFavorites = findViewById(R.id.ivFavorites);
         ivCarrito = findViewById(R.id.ivCarrito);
-        ivlogin = findViewById(R.id.ivLogin);
 
+        ivlogin = findViewById(R.id.ivLogin);
 
         this.ivFavorites.setOnClickListener(this::favorites);
         this.ivCarrito.setOnClickListener(this::carrito);
@@ -47,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         begin();
         showMovies();
-        recyclerView=findViewById(R.id.rv_movies);
-        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        recyclerView = findViewById(R.id.rv_movies);
+        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
     }
 
 
@@ -56,13 +58,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void favorites(View view) {
-        Intent irfav = new Intent(this,FavoritesActivity.class);
+        Intent irfav = new Intent(this, FavoritesActivity.class);
         startActivity(irfav);
         finish();
+
+        ivFavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void irlogin(View view) {
-        Intent irlogin = new Intent(this,LoginActivity.class);
+        Intent irlogin = new Intent(this, LoginActivity.class);
         startActivity(irlogin);
         finish();
     }
@@ -77,19 +88,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showMovies(){
+
+    public void showMovies() {
         Call<List<co.edu.adelantos_proyecto.model.Movie>> call = ApiClient.getClient().create(ApiMovie.class).getMovies();
-
-
         call.enqueue(new Callback<List<Movie>>() {
             @Override
             public void onResponse(Call<List<Movie>> call, Response<List<Movie>> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     movies = response.body();
-                    movieAdapter=new MovieAdapter(movies,getApplicationContext());
+                    movieAdapter = new MovieAdapter(movies, getApplicationContext());
                     recyclerView.setAdapter(movieAdapter);
                 }
             }
+
             @Override
             public void onFailure(Call<List<Movie>> call, Throwable t) {
                 Log.e("API Error", "Error: " + t.getMessage());
@@ -98,8 +109,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
-
-

@@ -10,12 +10,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import co.edu.adelantos_proyecto.model.Product;
+
 public class productos extends AppCompatActivity {
 
     private ImageView icvolver;
+
     private TextView tituloProducto, descripcionProducto;
     private ImageView imagenProducto;
     private Button agregarCarrito;
+
+
+    private List<Product> productList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
